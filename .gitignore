@@ -1,0 +1,7 @@
+/vc2013/Debug
+/vc2013/Release
+
+*.opensdf
+*.sdf
+*.v12.suo
+*.ico
