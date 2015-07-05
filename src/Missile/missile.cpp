@@ -35,6 +35,13 @@ void Missile::horming() {
 
   float dot = Forward.normalized().dot(Aim.normalized());
   console() << "dot = " << dot << std::endl;
+
+  if (dot < 1.0f) dot = 1.0f;
+
+  float angle = std::acosf(dot); // ”÷“®‚¾‚É‚¹‚¸0
+  console() << "angle" << angle << std::endl;
+
+
 }
 
 void Missile::update() {
