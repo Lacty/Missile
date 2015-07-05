@@ -68,9 +68,10 @@ void MissileApp::setup() {
 void MissileApp::update() {
   rot.y += 0.04f;
   rot.x += 0.03f;
+  rot.z += 0.02f;
   Matrix44f root_translate = Matrix44f::createTranslation(Vec3f(0, 0, 0));
   Matrix44f rotate = Matrix44f::createRotation(rot);
-  Matrix44f translate = Matrix44f::createTranslation(Vec3f(0, 80, 140));
+  Matrix44f translate = Matrix44f::createTranslation(Vec3f(20, 80, 140));
   pos = root_translate * rotate * translate * Vec3f(0, 0, 0);
 
   for (auto &obj : missiles) {
