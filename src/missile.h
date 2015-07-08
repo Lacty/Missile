@@ -7,16 +7,11 @@
 
 class Missile {
 private:
-  Vec3f pos;
-  Vec3f size;
-  Vec3f rot_speed;
-
-  Color color;
+  //Matrix44f matrix;
+  Vec3f target;
+  Vec3f last_pos;
 
   Vec3f velocity;
-  Vec3f rotate;
-
-  Vec3f target;
 
   CameraPersp& cam;
 
@@ -25,7 +20,7 @@ private:
 public:
   Missile(CameraPersp& cam);
 
-  void setTarget(Vec3f target) {
+  inline void setTarget(Vec3f target) {
     this->target = target;
   }
 
